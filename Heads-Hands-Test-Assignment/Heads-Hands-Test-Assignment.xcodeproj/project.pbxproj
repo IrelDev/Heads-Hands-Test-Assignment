@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,7 +14,29 @@
 		71C6F23D26F251FE00224D2E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71C6F23B26F251FE00224D2E /* LaunchScreen.storyboard */; };
 		71C6F24526F255E700224D2E /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 71C6F24426F255E700224D2E /* README.md */; };
 		71C6F24726F259D400224D2E /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C6F24626F259D400224D2E /* ApplicationCoordinator.swift */; };
+		71C6F24C26F25BBE00224D2E /* Kingfisher.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71C6F24926F25BBE00224D2E /* Kingfisher.xcframework */; };
+		71C6F24D26F25BBE00224D2E /* Kingfisher.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 71C6F24926F25BBE00224D2E /* Kingfisher.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		71C6F24E26F25BBE00224D2E /* Alamofire.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71C6F24A26F25BBE00224D2E /* Alamofire.xcframework */; };
+		71C6F24F26F25BBE00224D2E /* Alamofire.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 71C6F24A26F25BBE00224D2E /* Alamofire.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		71C6F25026F25BBE00224D2E /* VKSdkFramework.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71C6F24B26F25BBE00224D2E /* VKSdkFramework.xcframework */; };
+		71C6F25126F25BBE00224D2E /* VKSdkFramework.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 71C6F24B26F25BBE00224D2E /* VKSdkFramework.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		71C6F25226F25BBE00224D2E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				71C6F24F26F25BBE00224D2E /* Alamofire.xcframework in Embed Frameworks */,
+				71C6F24D26F25BBE00224D2E /* Kingfisher.xcframework in Embed Frameworks */,
+				71C6F25126F25BBE00224D2E /* VKSdkFramework.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		71C6F22D26F251FD00224D2E /* Heads-Hands-Test-Assignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Heads-Hands-Test-Assignment.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -26,6 +48,9 @@
 		71C6F23E26F251FE00224D2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		71C6F24426F255E700224D2E /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		71C6F24626F259D400224D2E /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
+		71C6F24926F25BBE00224D2E /* Kingfisher.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Kingfisher.xcframework; path = Carthage/Build/Kingfisher.xcframework; sourceTree = "<group>"; };
+		71C6F24A26F25BBE00224D2E /* Alamofire.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Alamofire.xcframework; path = Carthage/Build/Alamofire.xcframework; sourceTree = "<group>"; };
+		71C6F24B26F25BBE00224D2E /* VKSdkFramework.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = VKSdkFramework.xcframework; path = Carthage/Build/VKSdkFramework.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +58,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71C6F24E26F25BBE00224D2E /* Alamofire.xcframework in Frameworks */,
+				71C6F24C26F25BBE00224D2E /* Kingfisher.xcframework in Frameworks */,
+				71C6F25026F25BBE00224D2E /* VKSdkFramework.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,6 +73,7 @@
 				71C6F24426F255E700224D2E /* README.md */,
 				71C6F22F26F251FD00224D2E /* Heads-Hands-Test-Assignment */,
 				71C6F22E26F251FD00224D2E /* Products */,
+				71C6F24826F25BBE00224D2E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,6 +99,16 @@
 			path = "Heads-Hands-Test-Assignment";
 			sourceTree = "<group>";
 		};
+		71C6F24826F25BBE00224D2E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				71C6F24A26F25BBE00224D2E /* Alamofire.xcframework */,
+				71C6F24926F25BBE00224D2E /* Kingfisher.xcframework */,
+				71C6F24B26F25BBE00224D2E /* VKSdkFramework.xcframework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -80,6 +119,7 @@
 				71C6F22926F251FD00224D2E /* Sources */,
 				71C6F22A26F251FD00224D2E /* Frameworks */,
 				71C6F22B26F251FD00224D2E /* Resources */,
+				71C6F25226F25BBE00224D2E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
