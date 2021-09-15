@@ -39,11 +39,12 @@ extension LoginView {
     }
     
     func setupNSLayoutConstraints() {
-        let widthConstraint = loginButton.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.7)
+        let widthConstraint = loginButton.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.8)
+        widthConstraint.priority = .defaultHigh
         
         NSLayoutConstraint.activate([
             loginButton.heightAnchor.constraint(equalToConstant: 44),
-            loginButton.widthAnchor.constraint(lessThanOrEqualToConstant: 320),
+            loginButton.widthAnchor.constraint(lessThanOrEqualToConstant: 320), // iPad & landscape mode
             widthConstraint,
             loginButton.centerXAnchor.constraint(equalTo: centerXAnchor),
             loginButton.centerYAnchor.constraint(equalTo: centerYAnchor)
