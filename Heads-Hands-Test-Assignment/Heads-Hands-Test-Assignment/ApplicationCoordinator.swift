@@ -14,7 +14,7 @@ struct ApplicationCoordinator {
         self.window = window
     }
     func startApplication() {
-        let launchViewController = ViewController()
+        let launchViewController = LoginViewController()
         
         window?.rootViewController = launchViewController
         window?.makeKeyAndVisible()
