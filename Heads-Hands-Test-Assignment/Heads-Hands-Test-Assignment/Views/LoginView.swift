@@ -15,12 +15,13 @@ class LoginView: UIView {
         loginButton.clipsToBounds = true
         
         loginButton.setTitleColor(.white, for: .normal)
-        loginButton.setTitle("Войти", for: .normal)
-        loginButton.backgroundColor = .systemBlue
+        loginButton.setTitle("Login", for: .normal)
+        loginButton.backgroundColor = UIColor(named: "AccentColor")
         
         loginButton.translatesAutoresizingMaskIntoConstraints = false
         return loginButton
     }()
+    
     init() {
         super.init(frame: .zero)
 
@@ -31,6 +32,7 @@ class LoginView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
 }
+
 extension LoginView {
     func setupViews() {
         backgroundColor = .systemBackground
