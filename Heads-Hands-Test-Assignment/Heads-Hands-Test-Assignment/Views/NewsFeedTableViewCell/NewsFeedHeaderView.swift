@@ -47,7 +47,7 @@ class NewsFeedHeaderView: UIView {
     }()
     lazy var dateLabel: UILabel = {
         let dateLabel = UILabel()
-        dateLabel.textColor = .gray
+        dateLabel.textColor = UIColor(named: "SecondaryTextColor")
         dateLabel.font = UIFont.systemFont(ofSize: 13)
         
         return dateLabel
