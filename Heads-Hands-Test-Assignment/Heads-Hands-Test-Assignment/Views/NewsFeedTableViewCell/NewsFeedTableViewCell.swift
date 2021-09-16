@@ -20,6 +20,7 @@ class NewsFeedTableViewCell: UITableViewCell {
         let stackView = UIStackView()
         stackView.alignment = .fill
         stackView.spacing = 12
+        stackView.axis = .vertical
         
         stackView.translatesAutoresizingMaskIntoConstraints = false
         return stackView
@@ -55,7 +56,7 @@ extension NewsFeedTableViewCell {
     func setupNSLayoutConstraints() {
         NSLayoutConstraint.activate([
             stackView.leadingAnchor.constraint(equalTo: contentView.layoutMarginsGuide.leadingAnchor, constant: 10),
-            stackView.trailingAnchor.constraint(equalTo: contentView.layoutMarginsGuide.trailingAnchor, constant: 10),
+            stackView.trailingAnchor.constraint(equalTo: contentView.layoutMarginsGuide.trailingAnchor, constant: -10),
             stackView.topAnchor.constraint(equalTo: contentView.layoutMarginsGuide.topAnchor, constant: 10),
             stackView.bottomAnchor.constraint(equalTo: contentView.layoutMarginsGuide.bottomAnchor, constant: -10)
         ])
