@@ -33,6 +33,12 @@ class NewsFeedTableViewCell: UITableViewCell {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        
+        headerView.reset()
+    }
 }
 extension NewsFeedTableViewCell {
     func setupViews() {

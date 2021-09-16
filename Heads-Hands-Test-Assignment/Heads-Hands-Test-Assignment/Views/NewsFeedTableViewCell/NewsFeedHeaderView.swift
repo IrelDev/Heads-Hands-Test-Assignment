@@ -9,14 +9,14 @@ import UIKit
 
 class NewsFeedHeaderView: UIView {
     lazy var containerStackView: UIStackView = {
-       let containerStackView = UIStackView()
+        let containerStackView = UIStackView()
         containerStackView.axis = .vertical
         
         containerStackView.translatesAutoresizingMaskIntoConstraints = false
         return containerStackView
     }()
     lazy var headerStackView: UIStackView = {
-       let headerStackView = UIStackView()
+        let headerStackView = UIStackView()
         headerStackView.axis = .horizontal
         headerStackView.spacing = 12
         headerStackView.alignment = .center
@@ -24,7 +24,7 @@ class NewsFeedHeaderView: UIView {
         return headerStackView
     }()
     lazy var titleDateStackView: UIStackView = {
-       let titleDateStackView = UIStackView()
+        let titleDateStackView = UIStackView()
         titleDateStackView.axis = .vertical
         titleDateStackView.alignment = .leading
         titleDateStackView.spacing = 2
@@ -42,7 +42,7 @@ class NewsFeedHeaderView: UIView {
     lazy var titleLabel: UILabel = {
         let titleLabel = UILabel()
         titleLabel.font = UIFont.boldSystemFont(ofSize: 14)
-
+        
         return titleLabel
     }()
     lazy var dateLabel: UILabel = {
@@ -61,6 +61,11 @@ class NewsFeedHeaderView: UIView {
     }
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    func reset() {
+        imageView.image = nil
+        dateLabel.text = nil
+        titleLabel.text = nil
     }
 }
 extension NewsFeedHeaderView {
