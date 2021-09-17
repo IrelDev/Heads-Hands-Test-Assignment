@@ -23,12 +23,12 @@ class AuthenticationService: NSObject {
     }
     
     func wakeUpSession() {
-        let scope = ["offline", "wall", "friends"]
+        let permissions = ["offline", "wall", "friends"]
         
-        VKSdk.wakeUpSession(scope, complete: { (state, error) in
+        VKSdk.wakeUpSession(permissions, complete: { (state, error) in
             switch state {
             case .initialized:
-                VKSdk.authorize(scope)
+                VKSdk.authorize(permissions)
             case .authorized:
                 self.delegate?.authenticationSucceeded()
             default:
