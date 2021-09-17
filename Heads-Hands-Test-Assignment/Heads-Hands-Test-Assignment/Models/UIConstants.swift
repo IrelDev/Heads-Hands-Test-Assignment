@@ -18,7 +18,7 @@ struct UIConstants {
     static let titleDateHeaderSpacing: CGFloat = 2
     static let newsFeedElementSpacing: CGFloat = 12
     
-    static let minimumInteritemSpacingForSectionAt: CGFloat = 2
+    static let minimumInteritemSpacingForSectionAt: CGFloat = 4
     static let minimumLineSpacingForSectionAt: CGFloat = 4
     
     static let attachmentSmallHeight: CGFloat = 160
