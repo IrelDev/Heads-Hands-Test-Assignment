@@ -49,7 +49,7 @@ extension LoginViewController: AuthenticationServiceDelegate {
         
         alert.addAction(alertAction)
         
-        SceneDelegate.getTopMostViewController()?.present(alert, animated: true, completion: nil)
+        self.present(alert, animated: true, completion: nil)
     }
     
     func shouldShowViewController(viewController: UIViewController) {
