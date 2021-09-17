@@ -8,9 +8,12 @@
 import UIKit
 
 class NewsFeedHeaderView: UIView {
+    var textViewHeightConstraint: NSLayoutConstraint!
+    
     lazy var containerStackView: UIStackView = {
         let containerStackView = UIStackView()
         containerStackView.axis = .vertical
+        containerStackView.spacing = 16
         
         containerStackView.translatesAutoresizingMaskIntoConstraints = false
         return containerStackView
@@ -53,6 +56,18 @@ class NewsFeedHeaderView: UIView {
         return dateLabel
     }()
     
+    lazy var contentTextView: UITextView = {
+        let contentTextView = UITextView()
+        contentTextView.font = UIFont.systemFont(ofSize: 14)
+        contentTextView.backgroundColor = .clear
+        contentTextView.isEditable = false
+        contentTextView.dataDetectorTypes = [.all]
+        contentTextView.textContainerInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+
+        contentTextView.isScrollEnabled = false
+        return contentTextView
+    }()
+    
     init() {
         super.init(frame: .zero)
         
@@ -66,6 +81,9 @@ class NewsFeedHeaderView: UIView {
         imageView.image = nil
         dateLabel.text = nil
         titleLabel.text = nil
+        contentTextView.text = nil
+        
+        textViewHeightConstraint.constant = 0
     }
 }
 extension NewsFeedHeaderView {
@@ -78,14 +96,19 @@ extension NewsFeedHeaderView {
         
         titleDateStackView.addArrangedSubview(titleLabel)
         titleDateStackView.addArrangedSubview(dateLabel)
+        
+        containerStackView.addArrangedSubview(contentTextView)
     }
     func setupNSLayoutConstraints() {
+        textViewHeightConstraint = contentTextView.heightAnchor.constraint(greaterThanOrEqualToConstant: 0)
+        
         NSLayoutConstraint.activate([
             containerStackView.leadingAnchor.constraint(equalTo: leadingAnchor),
             containerStackView.trailingAnchor.constraint(equalTo: trailingAnchor),
             containerStackView.topAnchor.constraint(equalTo: topAnchor),
             containerStackView.bottomAnchor.constraint(equalTo: bottomAnchor),
-            
+                        
+            textViewHeightConstraint,
             imageView.widthAnchor.constraint(equalToConstant: 44),
             headerStackView.heightAnchor.constraint(equalToConstant: 44),
         ])
