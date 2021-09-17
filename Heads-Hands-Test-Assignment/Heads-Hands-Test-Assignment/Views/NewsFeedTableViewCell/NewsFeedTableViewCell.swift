@@ -71,14 +71,14 @@ extension NewsFeedTableViewCell {
         contentCollectionView.register(NewsFeedCollectionViewCell.self, forCellWithReuseIdentifier: "attachmentCell")
     }
     func setupNSLayoutConstraints() {
-        let bottomConstraint = stackView.bottomAnchor.constraint(equalTo: contentView.layoutMarginsGuide.bottomAnchor, constant: -10)
+        let bottomConstraint = stackView.bottomAnchor.constraint(equalTo: contentView.layoutMarginsGuide.bottomAnchor, constant: 0)
         bottomConstraint.priority = UILayoutPriority(999)
         
         contentCollectionViewConstraint = contentCollectionView.heightAnchor.constraint(equalToConstant: 0)
         NSLayoutConstraint.activate([
             stackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 0),
             stackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: 0),
-            stackView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10),
+            stackView.topAnchor.constraint(equalTo: contentView.layoutMarginsGuide.topAnchor, constant: 0),
             
             bottomConstraint,
             contentCollectionViewConstraint

@@ -9,6 +9,7 @@ import UIKit
 
 class NewsFeedHeaderView: UIView {
     var textViewHeightConstraint: NSLayoutConstraint!
+    var containerStackViewBottomConstraint: NSLayoutConstraint!
     
     lazy var containerStackView: UIStackView = {
         let containerStackView = UIStackView()
@@ -74,7 +75,6 @@ class NewsFeedHeaderView: UIView {
     init() {
         super.init(frame: .zero)
         
-       
         setupViews()
         setupNSLayoutConstraints()
     }
@@ -88,6 +88,7 @@ class NewsFeedHeaderView: UIView {
         contentTextView.text = nil
         
         textViewHeightConstraint.constant = 0
+        containerStackViewBottomConstraint.constant = 0
     }
 }
 extension NewsFeedHeaderView {
@@ -107,11 +108,14 @@ extension NewsFeedHeaderView {
         textViewHeightConstraint = contentTextView.heightAnchor.constraint(equalToConstant: 0)
         textViewHeightConstraint.priority = .defaultHigh
         
+        containerStackViewBottomConstraint = containerStackView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: 0)
+        containerStackViewBottomConstraint.priority = .required
+        
         NSLayoutConstraint.activate([
             containerStackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
             containerStackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
             containerStackView.topAnchor.constraint(equalTo: topAnchor),
-            containerStackView.bottomAnchor.constraint(equalTo: bottomAnchor),
+            containerStackViewBottomConstraint,
                         
             textViewHeightConstraint,
             imageView.widthAnchor.constraint(equalToConstant: 44),
