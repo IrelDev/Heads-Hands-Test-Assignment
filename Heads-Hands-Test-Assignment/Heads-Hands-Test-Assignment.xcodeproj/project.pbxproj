@@ -26,6 +26,8 @@
 		71985BCA26F3890200EE1C66 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71985BC926F3890200EE1C66 /* Video.swift */; };
 		71985BCD26F3A48200EE1C66 /* FeedResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71985BCC26F3A48200EE1C66 /* FeedResponse.swift */; };
 		71BBAE9626F4B66D0052CD04 /* NewsFeedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BBAE9526F4B66D0052CD04 /* NewsFeedCollectionViewCell.swift */; };
+		71BBAE9826F50C3F0052CD04 /* UIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BBAE9726F50C3F0052CD04 /* UIConstants.swift */; };
+		71BBAE9A26F513420052CD04 /* NewsFeedSizeCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BBAE9926F513420052CD04 /* NewsFeedSizeCalculator.swift */; };
 		71BBCA2226F3AA5E0082FF3B /* NewsFeedHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BBCA2126F3AA5E0082FF3B /* NewsFeedHeaderView.swift */; };
 		71BBCA2426F3AA710082FF3B /* NewsFeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BBCA2326F3AA710082FF3B /* NewsFeedTableViewCell.swift */; };
 		71BBCA2626F3AF640082FF3B /* HeaderRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BBCA2526F3AF640082FF3B /* HeaderRepresentable.swift */; };
@@ -82,6 +84,8 @@
 		71985BC926F3890200EE1C66 /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		71985BCC26F3A48200EE1C66 /* FeedResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FeedResponse.swift; path = ../../../../../Documents/FeedResponse.swift; sourceTree = "<group>"; };
 		71BBAE9526F4B66D0052CD04 /* NewsFeedCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedCollectionViewCell.swift; sourceTree = "<group>"; };
+		71BBAE9726F50C3F0052CD04 /* UIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIConstants.swift; sourceTree = "<group>"; };
+		71BBAE9926F513420052CD04 /* NewsFeedSizeCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedSizeCalculator.swift; sourceTree = "<group>"; };
 		71BBCA2126F3AA5E0082FF3B /* NewsFeedHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedHeaderView.swift; sourceTree = "<group>"; };
 		71BBCA2326F3AA710082FF3B /* NewsFeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedTableViewCell.swift; sourceTree = "<group>"; };
 		71BBCA2526F3AF640082FF3B /* HeaderRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderRepresentable.swift; sourceTree = "<group>"; };
@@ -120,6 +124,7 @@
 			children = (
 				7183329326F32F4A00F73983 /* NetworkService.swift */,
 				7183328526F3104300F73983 /* AuthenticationService.swift */,
+				71BBAE9926F513420052CD04 /* NewsFeedSizeCalculator.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -137,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				7183329126F32CEF00F73983 /* APIMethod.swift */,
+				71BBAE9726F50C3F0052CD04 /* UIConstants.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -329,6 +335,7 @@
 				71C6F23526F251FD00224D2E /* LoginViewController.swift in Sources */,
 				71BBCA2426F3AA710082FF3B /* NewsFeedTableViewCell.swift in Sources */,
 				71985BC326F386CA00EE1C66 /* Group.swift in Sources */,
+				71BBAE9826F50C3F0052CD04 /* UIConstants.swift in Sources */,
 				71C6F23126F251FD00224D2E /* AppDelegate.swift in Sources */,
 				7183328D26F31DAB00F73983 /* NewsFeedViewController.swift in Sources */,
 				7183329226F32CF000F73983 /* APIMethod.swift in Sources */,
@@ -350,6 +357,7 @@
 				71985BCD26F3A48200EE1C66 /* FeedResponse.swift in Sources */,
 				71BBCA2826F3B1990082FF3B /* NewsFeedFooterView.swift in Sources */,
 				7183329426F32F4A00F73983 /* NetworkService.swift in Sources */,
+				71BBAE9A26F513420052CD04 /* NewsFeedSizeCalculator.swift in Sources */,
 				7183328F26F31FE400F73983 /* NewsFeedView.swift in Sources */,
 				7183329726F332FC00F73983 /* SceneDelegateTopMostViewControllerExtension.swift in Sources */,
 			);

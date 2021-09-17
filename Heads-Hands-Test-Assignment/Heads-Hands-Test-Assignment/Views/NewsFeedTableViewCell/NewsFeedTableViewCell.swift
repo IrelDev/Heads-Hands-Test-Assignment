@@ -88,27 +88,12 @@ extension NewsFeedTableViewCell {
 extension NewsFeedTableViewCell: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         guard let attachments = attachments else { return CGSize.zero }
-        var sizes = CGSize()
         
         let width = bounds.width
+        let calculator = NewsFeedSizeCalculator()
         
-        if indexPath.row == 0 || indexPath.row == attachments.count - 1 && indexPath.row % 2 != 0 {
-            var ratio: CGFloat = 1.0
-            
-            let attachment = attachments[indexPath.row]
-            
-            if let photo = attachment.photo {
-                ratio = CGFloat(photo.height) / CGFloat(photo.width)
-            } else if let video = attachment.video {
-                ratio = CGFloat(video.imageHeight) / CGFloat(video.imageWidth)
-            }
-            
-            let height = width * CGFloat(ratio)
-            sizes = CGSize(width: width, height: height)
-        } else {
-            sizes = CGSize(width: bounds.width / 2 - UIConstants.minimumInteritemSpacingForSectionAt, height: UIConstants.attachmentSmallHeight)
-        }
-        return sizes
+        let size = calculator.calculateAttachmentSize(attachments: attachments, row: indexPath.row, viewWidth: width)
+        return size
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
