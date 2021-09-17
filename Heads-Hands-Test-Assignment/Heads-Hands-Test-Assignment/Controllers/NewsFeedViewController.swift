@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import Kingfisher
 
 class NewsFeedViewController: UIViewController {
     private let newsFeedView = NewsFeedView()
@@ -93,10 +92,10 @@ extension NewsFeedViewController: NewsFeedDataLoaderDelegate {
             DispatchQueue.main.async {
                 guard let feedResponse = feedResponse else { return }
                 let shouldInsertRows = self.dataSource == nil
-
+                
                 self.dataSource = feedResponse
                 self.startFetchingFrom = feedResponse.nextFrom
-
+                
                 if shouldInsertRows {
                     let indexPaths = feedResponse.items.enumerated().map { IndexPath(row: $0.offset, section: 0) }
                     self.newsFeedView.tableView.insertRows(at: indexPaths, with: .automatic)
@@ -112,13 +111,7 @@ extension NewsFeedViewController: NewsFeedDataLoaderDelegate {
     func oldDataLoaded(newDataSource: FeedResponse?, newItems: [IndexPath], startFetchingFrom: String?) {
         self.dataSource = newDataSource
         self.startFetchingFrom = startFetchingFrom
-        #if DEBUG
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-            self.newsFeedView.tableView.insertRows(at: newItems, with: .top)
-        }
-        #else
-        self.newsFeedView.tableView.insertRows(at: indexPaths, with: .top)
-        #endif
-
+        
+        self.newsFeedView.tableView.insertRows(at: newItems, with: .top)
     }
 }

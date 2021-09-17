@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class NewsFeedTableViewCell: UITableViewCell {
     var headerView = NewsFeedHeaderView()
