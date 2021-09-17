@@ -38,6 +38,7 @@ fileprivate func makeImageView(image: UIImage?) -> UIImageView {
     let imageView = UIImageView(image: image)
     imageView.contentMode = .scaleAspectFit
     
+    imageView.translatesAutoresizingMaskIntoConstraints = false
     imageView.widthAnchor.constraint(equalToConstant: height).isActive = true
     return imageView
 }
@@ -138,8 +139,8 @@ extension NewsFeedFooterView {
     }
     func setupNSLayoutConstraints() {
         NSLayoutConstraint.activate([
-            containerStackView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            containerStackView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            containerStackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
+            containerStackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
             containerStackView.topAnchor.constraint(equalTo: topAnchor),
             containerStackView.bottomAnchor.constraint(equalTo: bottomAnchor),
             

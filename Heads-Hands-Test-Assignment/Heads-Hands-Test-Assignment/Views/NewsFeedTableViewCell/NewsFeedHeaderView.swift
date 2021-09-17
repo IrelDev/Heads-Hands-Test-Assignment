@@ -61,16 +61,20 @@ class NewsFeedHeaderView: UIView {
         contentTextView.font = UIFont.systemFont(ofSize: 14)
         contentTextView.backgroundColor = .clear
         contentTextView.isEditable = false
+        
         contentTextView.dataDetectorTypes = [.all]
         contentTextView.textContainerInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-
+        contentTextView.tintColor = UIColor(named: "AccentColor")
+        
         contentTextView.isScrollEnabled = false
+        contentTextView.translatesAutoresizingMaskIntoConstraints = false
         return contentTextView
     }()
     
     init() {
         super.init(frame: .zero)
         
+       
         setupViews()
         setupNSLayoutConstraints()
     }
@@ -100,11 +104,12 @@ extension NewsFeedHeaderView {
         containerStackView.addArrangedSubview(contentTextView)
     }
     func setupNSLayoutConstraints() {
-        textViewHeightConstraint = contentTextView.heightAnchor.constraint(greaterThanOrEqualToConstant: 0)
+        textViewHeightConstraint = contentTextView.heightAnchor.constraint(equalToConstant: 0)
+        textViewHeightConstraint.priority = .defaultHigh
         
         NSLayoutConstraint.activate([
-            containerStackView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            containerStackView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            containerStackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
+            containerStackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
             containerStackView.topAnchor.constraint(equalTo: topAnchor),
             containerStackView.bottomAnchor.constraint(equalTo: bottomAnchor),
                         
