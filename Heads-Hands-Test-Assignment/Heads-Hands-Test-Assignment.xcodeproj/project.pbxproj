@@ -152,7 +152,6 @@
 			isa = PBXGroup;
 			children = (
 				7183329126F32CEF00F73983 /* APIMethod.swift */,
-				71BBAE9726F50C3F0052CD04 /* UIConstants.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -199,6 +198,7 @@
 		71BD7A8A26F25DBB00DCA7CB /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				71BBAE9726F50C3F0052CD04 /* UIConstants.swift */,
 				71985BB626F381C500EE1C66 /* WrappedFeedResponse.swift */,
 				71985BCC26F3A48200EE1C66 /* FeedResponse.swift */,
 				71985BB826F382B400EE1C66 /* FeedItem.swift */,
