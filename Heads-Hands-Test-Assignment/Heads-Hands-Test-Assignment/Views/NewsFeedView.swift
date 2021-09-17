@@ -30,7 +30,6 @@ class NewsFeedView: UIView {
         let tableView = UITableView(frame: .zero, style: .grouped)
         tableView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         tableView.tableHeaderView = UIView(frame: CGRect(x: 0, y: 0, width: 0, height: 0.001))
-
         return tableView
     }()
     

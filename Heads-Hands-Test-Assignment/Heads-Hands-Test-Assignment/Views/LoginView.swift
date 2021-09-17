@@ -11,7 +11,7 @@ class LoginView: UIView {
     lazy var loginButton: UIButton = {
         let loginButton = UIButton(type: .system)
         
-        loginButton.layer.cornerRadius = 7
+        loginButton.layer.cornerRadius = UIConstants.buttonCornerRadius
         loginButton.clipsToBounds = true
         
         loginButton.setTitleColor(.white, for: .normal)
@@ -45,7 +45,7 @@ extension LoginView {
         widthConstraint.priority = .defaultHigh
         
         NSLayoutConstraint.activate([
-            loginButton.heightAnchor.constraint(equalToConstant: 44),
+            loginButton.heightAnchor.constraint(equalToConstant: UIConstants.buttonHeight),
             loginButton.widthAnchor.constraint(lessThanOrEqualToConstant: 320), // iPad & landscape mode
             widthConstraint,
             loginButton.centerXAnchor.constraint(equalTo: centerXAnchor),

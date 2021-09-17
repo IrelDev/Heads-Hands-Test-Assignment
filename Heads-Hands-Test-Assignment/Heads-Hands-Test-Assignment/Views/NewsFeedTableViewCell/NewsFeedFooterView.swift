@@ -7,7 +7,6 @@
 
 import UIKit
 
-fileprivate let height: CGFloat = 26
 fileprivate let spacing: CGFloat = 4
 
 fileprivate func makeStackView() -> UIStackView {
@@ -18,7 +17,7 @@ fileprivate func makeStackView() -> UIStackView {
     stackView.spacing = spacing
     
     stackView.translatesAutoresizingMaskIntoConstraints = false
-    stackView.heightAnchor.constraint(equalToConstant: height).isActive = true
+    stackView.heightAnchor.constraint(equalToConstant: UIConstants.newsFeedButtonHeight).isActive = true
     
     return stackView
 }
@@ -30,7 +29,7 @@ fileprivate func makeLabel() -> UILabel {
     label.textAlignment = .left
     
     label.translatesAutoresizingMaskIntoConstraints = false
-    label.heightAnchor.constraint(equalToConstant: height).isActive = true
+    label.heightAnchor.constraint(equalToConstant: UIConstants.newsFeedButtonHeight).isActive = true
     
     return label
 }
@@ -39,7 +38,7 @@ fileprivate func makeImageView(image: UIImage?) -> UIImageView {
     imageView.contentMode = .scaleAspectFit
     
     imageView.translatesAutoresizingMaskIntoConstraints = false
-    imageView.widthAnchor.constraint(equalToConstant: height).isActive = true
+    imageView.widthAnchor.constraint(equalToConstant: UIConstants.newsFeedButtonHeight).isActive = true
     return imageView
 }
 class NewsFeedFooterView: UIView {
@@ -135,12 +134,11 @@ extension NewsFeedFooterView {
         containerStackView.addArrangedSubview(eyeStackView)
         eyeStackView.addArrangedSubview(eyeImageView)
         eyeStackView.addArrangedSubview(eyeLabel)
-        //        addSubview(containerStackView)
     }
     func setupNSLayoutConstraints() {
         NSLayoutConstraint.activate([
-            containerStackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
-            containerStackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
+            containerStackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: UIConstants.inset),
+            containerStackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -UIConstants.inset),
             containerStackView.topAnchor.constraint(equalTo: topAnchor),
             containerStackView.bottomAnchor.constraint(equalTo: bottomAnchor),
             

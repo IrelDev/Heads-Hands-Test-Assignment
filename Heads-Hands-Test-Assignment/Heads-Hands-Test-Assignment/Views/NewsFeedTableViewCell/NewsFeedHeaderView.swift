@@ -14,7 +14,7 @@ class NewsFeedHeaderView: UIView {
     lazy var containerStackView: UIStackView = {
         let containerStackView = UIStackView()
         containerStackView.axis = .vertical
-        containerStackView.spacing = 16
+        containerStackView.spacing = UIConstants.newsFeedElementSpacing
         
         containerStackView.translatesAutoresizingMaskIntoConstraints = false
         return containerStackView
@@ -22,7 +22,7 @@ class NewsFeedHeaderView: UIView {
     lazy var headerStackView: UIStackView = {
         let headerStackView = UIStackView()
         headerStackView.axis = .horizontal
-        headerStackView.spacing = 12
+        headerStackView.spacing = UIConstants.newsFeedElementSpacing
         headerStackView.alignment = .center
         headerStackView.translatesAutoresizingMaskIntoConstraints = false
         return headerStackView
@@ -31,13 +31,13 @@ class NewsFeedHeaderView: UIView {
         let titleDateStackView = UIStackView()
         titleDateStackView.axis = .vertical
         titleDateStackView.alignment = .leading
-        titleDateStackView.spacing = 2
+        titleDateStackView.spacing = UIConstants.titleDateHeaderSpacing
         
         return titleDateStackView
     }()
     lazy var imageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.layer.cornerRadius = 22
+        imageView.layer.cornerRadius = UIConstants.buttonHeight / 2
         imageView.clipsToBounds = true
         
         imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -112,14 +112,14 @@ extension NewsFeedHeaderView {
         containerStackViewBottomConstraint.priority = .required
         
         NSLayoutConstraint.activate([
-            containerStackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
-            containerStackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
+            containerStackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: UIConstants.inset),
+            containerStackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -UIConstants.inset),
             containerStackView.topAnchor.constraint(equalTo: topAnchor),
             containerStackViewBottomConstraint,
                         
             textViewHeightConstraint,
-            imageView.widthAnchor.constraint(equalToConstant: 44),
-            headerStackView.heightAnchor.constraint(equalToConstant: 44),
+            imageView.widthAnchor.constraint(equalToConstant: UIConstants.buttonHeight),
+            headerStackView.heightAnchor.constraint(equalToConstant: UIConstants.buttonHeight),
         ])
     }
 }

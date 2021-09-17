@@ -30,7 +30,7 @@ class NewsFeedTableViewCell: UITableViewCell {
     lazy var stackView: UIStackView = {
         let stackView = UIStackView()
         stackView.alignment = .fill
-        stackView.spacing = 12
+        stackView.spacing = UIConstants.newsFeedElementSpacing
         stackView.axis = .vertical
         
         stackView.translatesAutoresizingMaskIntoConstraints = false
@@ -106,17 +106,17 @@ extension NewsFeedTableViewCell: UICollectionViewDelegateFlowLayout {
             let height = width * CGFloat(ratio)
             sizes = CGSize(width: width, height: height)
         } else {
-            sizes = CGSize(width: bounds.width / 2 - 2, height: 160)
+            sizes = CGSize(width: bounds.width / 2 - UIConstants.minimumInteritemSpacingForSectionAt, height: UIConstants.attachmentSmallHeight)
         }
         return sizes
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        4
+        UIConstants.minimumLineSpacingForSectionAt
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        2
+        UIConstants.minimumInteritemSpacingForSectionAt
     }
 }
 extension NewsFeedTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource {
