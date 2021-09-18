@@ -59,10 +59,13 @@ class NewsFeedCollectionViewCell: UICollectionViewCell {
         videoButton.isHidden = false
         videoDurationLabel.isHidden = false
         
-        let videoSeconds = video.duration
-        let (hours, minutes, seconds) = (videoSeconds / 3600, (videoSeconds % 3600) / 60, (videoSeconds % 3600) % 60)
+        let formatter = DateComponentsFormatter()
+        formatter.allowedUnits = [.hour, .minute, .second]
+        formatter.unitsStyle = .positional
+
+        let formattedString = formatter.string(from: TimeInterval(video.duration))!
         
-        videoDurationLabel.text = "\(hours):\(minutes):\(seconds)"
+        videoDurationLabel.text = formattedString
     }
     
     override func prepareForReuse() {
