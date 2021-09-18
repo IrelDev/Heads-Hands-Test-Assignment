@@ -12,6 +12,10 @@ iOS Test Task from [Heads &amp; Hands](https://handh.ru)
           <td><img src = "Demo/MainDark.png" /></td>
           <td><img src = "Demo/MainLight.png"" /></td>
      </tr>
+     <tr>
+          <td><img src = "Demo/VideoDark.png" /></td>
+          <td><img src = "Demo/VideoLight.png"" /></td>
+     </tr>
 </table>
 
 ## Installation
