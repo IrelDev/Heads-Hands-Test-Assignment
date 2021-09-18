@@ -18,6 +18,10 @@ iOS Test Task from [Heads &amp; Hands](https://handh.ru)
      </tr>
 </table>
 
+<p align="center">  
+<img src = "Demo/Demo.gif" /><br>
+</p>
+
 ## Installation
 
 Being In terminal, navigate to the project folder and install carthage dependencies:
