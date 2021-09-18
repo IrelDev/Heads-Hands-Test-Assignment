@@ -1,6 +1,19 @@
 # Heads-Hands-Test-Assignment
 iOS Test Task from [Heads &amp; Hands](https://handh.ru)
 
+## Demo
+
+<table  align="center">
+    <tr>
+        <th>Dark Theme</th>
+        <th>Light Theme</th>
+     </tr>
+     <tr>
+          <td><img src = "Demo/MainDark.png" /></td>
+          <td><img src = "Demo/MainLight.png"" /></td>
+     </tr>
+</table>
+
 ## Installation
 
 Being In terminal, navigate to the project folder and install carthage dependencies:
