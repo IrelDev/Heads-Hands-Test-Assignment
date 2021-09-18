@@ -86,7 +86,7 @@ struct NewsFeedSizeCalculator {
             let height = viewWidth * CGFloat(ratio)
             size = CGSize(width: viewWidth, height: height)
         } else {
-            size = CGSize(width: viewWidth / 2 - UIConstants.minimumInteritemSpacingForSectionAt, height: UIConstants.attachmentSmallHeight)
+            size = CGSize(width: viewWidth / 2 - UIConstants.minimumInteritemSpacingForSectionAt / 2, height: UIConstants.attachmentSmallHeight)
         }
         return size
     }
