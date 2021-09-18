@@ -62,7 +62,7 @@ class NewsFeedCollectionViewCell: UICollectionViewCell {
         let formatter = DateComponentsFormatter()
         formatter.allowedUnits = [.hour, .minute, .second]
         formatter.unitsStyle = .positional
-
+        
         let formattedString = formatter.string(from: TimeInterval(video.duration))!
         
         videoDurationLabel.text = formattedString
@@ -77,8 +77,8 @@ class NewsFeedCollectionViewCell: UICollectionViewCell {
     }
     
     @objc func videoButtonPlayTapped() {
-        guard let video = video else { return }
-        guard let url = APIMethod.video.getVKApiURL(with: ["videos": "\(video.ownerId)_\(video.id)_\(video.accessKey ?? "")"]) else { return }
+        guard let video = video,
+              let url = APIMethod.video.getVKApiURL(with: ["videos": "\(video.ownerId)_\(video.id)_\(video.accessKey ?? "")"]) else { return }
         
         NetworkService.shared.makeRequest(url: url) { data, error in
             guard let decodedData = NetworkService.shared.decodeJSON(type: WrappedResponse<ConcreteVideoWrapped>.self, from: data) else { return }
