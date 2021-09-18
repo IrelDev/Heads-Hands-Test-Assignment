@@ -23,7 +23,7 @@ class AuthenticationService: NSObject {
     }
     
     func wakeUpSession() {
-        let permissions = ["offline", "wall", "friends"]
+        let permissions = ["offline", "wall", "friends", "video"]
         
         VKSdk.wakeUpSession(permissions, complete: { (state, error) in
             switch state {

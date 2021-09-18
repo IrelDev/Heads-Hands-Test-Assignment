@@ -6,10 +6,13 @@
 //
 
 import UIKit
+import AVKit
 
 class NewsFeedCollectionViewCell: UICollectionViewCell {
+    var video: Video?
+    
     lazy var imageView: UIImageView = {
-       let imageView = UIImageView()
+        let imageView = UIImageView()
         
         imageView.contentMode = .scaleAspectFill
         imageView.backgroundColor = .systemBackground
@@ -27,7 +30,7 @@ class NewsFeedCollectionViewCell: UICollectionViewCell {
         return videoButton
     }()
     lazy var videoDurationLabel: UILabel = {
-       let videoDurationLabel = UILabel()
+        let videoDurationLabel = UILabel()
         videoDurationLabel.font = UIFont.systemFont(ofSize: 13)
         videoDurationLabel.isHidden = true
         
@@ -51,20 +54,40 @@ class NewsFeedCollectionViewCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     func setupAttachmentAsVideo(video: Video) {
+        self.video = video
+        
         videoButton.isHidden = false
         videoDurationLabel.isHidden = false
         
         let videoSeconds = video.duration
         let (hours, minutes, seconds) = (videoSeconds / 3600, (videoSeconds % 3600) / 60, (videoSeconds % 3600) % 60)
-
+        
         videoDurationLabel.text = "\(hours):\(minutes):\(seconds)"
     }
     
     override func prepareForReuse() {
         super.prepareForReuse()
         
+        video = nil
         videoButton.isHidden = true
         videoDurationLabel.isHidden = true
+    }
+    
+    @objc func videoButtonPlayTapped() {
+        guard let video = video else { return }
+        guard let url = APIMethod.video.getVKApiURL(with: ["videos": "\(video.ownerId)_\(video.id)_\(video.accessKey ?? "")"]) else { return }
+        
+        NetworkService.shared.makeRequest(url: url) { data, error in
+            guard let decodedData = NetworkService.shared.decodeJSON(type: WrappedResponse<ConcreteVideoWrapped>.self, from: data) else { return }
+            
+            DispatchQueue.main.async {
+                if let video = decodedData.response?.items.first {
+                    if let videoURL = URL(string: video.player) {
+                        UIApplication.shared.open(videoURL)
+                    }
+                }
+            }
+        }
     }
 }
 extension NewsFeedCollectionViewCell {
@@ -72,6 +95,8 @@ extension NewsFeedCollectionViewCell {
         addSubview(imageView)
         addSubview(videoButton)
         addSubview(videoDurationLabel)
+        
+        videoButton.addTarget(self, action: #selector(videoButtonPlayTapped), for: .touchUpInside)
     }
     func setupNSLayoutConstraints() {
         NSLayoutConstraint.activate([

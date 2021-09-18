@@ -68,7 +68,7 @@ class NewsFeedDataLoader {
                 print("Error received requesting data: \(error)")
                 response(nil)
             }
-            let decoded = NetworkService.shared.decodeJSON(type: WrappedFeedResponse.self, from: data)
+            let decoded = NetworkService.shared.decodeJSON(type: WrappedResponse<FeedResponse>.self, from: data)
             response(decoded?.response)
         }
     }

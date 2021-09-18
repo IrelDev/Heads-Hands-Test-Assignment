@@ -10,6 +10,7 @@ import VKSdkFramework
 
 enum APIMethod: String {
     case news = "/method/newsfeed.get"
+    case video = "/method/video.get"
 }
 extension APIMethod {
     func getVKApiURL(with parameters: [String: String] = [:]) -> URL? {
