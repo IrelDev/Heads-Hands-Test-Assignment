@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7135B9EF26F638FF0091B270 /* ConcreteVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7135B9EE26F638FF0091B270 /* ConcreteVideo.swift */; };
 		7154D0DC26F51F4E00266E37 /* NewsFeedDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7154D0DB26F51F4E00266E37 /* NewsFeedDataLoader.swift */; };
 		7154D0E026F5217300266E37 /* NewsFeedDataLoaderDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7154D0DF26F5217300266E37 /* NewsFeedDataLoaderDelegate.swift */; };
+		7180111826F648A400A98DEE /* ConcreteVideoWrapped.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7180111726F648A400A98DEE /* ConcreteVideoWrapped.swift */; };
+		7180111C26F6497900A98DEE /* WrappedResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7180111B26F6497900A98DEE /* WrappedResponse.swift */; };
 		7183328626F3104300F73983 /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7183328526F3104300F73983 /* AuthenticationService.swift */; };
 		7183328B26F3145800F73983 /* AuthenticationServiceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7183328A26F3145800F73983 /* AuthenticationServiceDelegate.swift */; };
 		7183328D26F31DAB00F73983 /* NewsFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7183328C26F31DAB00F73983 /* NewsFeedViewController.swift */; };
@@ -16,7 +19,6 @@
 		7183329226F32CF000F73983 /* APIMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7183329126F32CEF00F73983 /* APIMethod.swift */; };
 		7183329426F32F4A00F73983 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7183329326F32F4A00F73983 /* NetworkService.swift */; };
 		7183329726F332FC00F73983 /* SceneDelegateTopMostViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7183329626F332FC00F73983 /* SceneDelegateTopMostViewControllerExtension.swift */; };
-		71985BB726F381C500EE1C66 /* WrappedFeedResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71985BB626F381C500EE1C66 /* WrappedFeedResponse.swift */; };
 		71985BB926F382B400EE1C66 /* FeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71985BB826F382B400EE1C66 /* FeedItem.swift */; };
 		71985BBB26F382CF00EE1C66 /* Count.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71985BBA26F382CF00EE1C66 /* Count.swift */; };
 		71985BBD26F3833200EE1C66 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71985BBC26F3833200EE1C66 /* Profile.swift */; };
@@ -69,8 +71,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7135B9EE26F638FF0091B270 /* ConcreteVideo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcreteVideo.swift; sourceTree = "<group>"; };
 		7154D0DB26F51F4E00266E37 /* NewsFeedDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedDataLoader.swift; sourceTree = "<group>"; };
 		7154D0DF26F5217300266E37 /* NewsFeedDataLoaderDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedDataLoaderDelegate.swift; sourceTree = "<group>"; };
+		7180111726F648A400A98DEE /* ConcreteVideoWrapped.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcreteVideoWrapped.swift; sourceTree = "<group>"; };
+		7180111B26F6497900A98DEE /* WrappedResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrappedResponse.swift; sourceTree = "<group>"; };
 		7183328526F3104300F73983 /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
 		7183328A26F3145800F73983 /* AuthenticationServiceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationServiceDelegate.swift; sourceTree = "<group>"; };
 		7183328C26F31DAB00F73983 /* NewsFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedViewController.swift; sourceTree = "<group>"; };
@@ -78,7 +83,6 @@
 		7183329126F32CEF00F73983 /* APIMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIMethod.swift; sourceTree = "<group>"; };
 		7183329326F32F4A00F73983 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		7183329626F332FC00F73983 /* SceneDelegateTopMostViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegateTopMostViewControllerExtension.swift; sourceTree = "<group>"; };
-		71985BB626F381C500EE1C66 /* WrappedFeedResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrappedFeedResponse.swift; sourceTree = "<group>"; };
 		71985BB826F382B400EE1C66 /* FeedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItem.swift; sourceTree = "<group>"; };
 		71985BBA26F382CF00EE1C66 /* Count.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Count.swift; sourceTree = "<group>"; };
 		71985BBC26F3833200EE1C66 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
@@ -172,6 +176,8 @@
 				71985BC426F386D600EE1C66 /* PhotoSize.swift */,
 				71985BC726F388EB00EE1C66 /* Image.swift */,
 				71985BC926F3890200EE1C66 /* Video.swift */,
+				7180111726F648A400A98DEE /* ConcreteVideoWrapped.swift */,
+				7135B9EE26F638FF0091B270 /* ConcreteVideo.swift */,
 			);
 			path = AttachmentModels;
 			sourceTree = "<group>";
@@ -198,7 +204,7 @@
 			isa = PBXGroup;
 			children = (
 				71BBAE9726F50C3F0052CD04 /* UIConstants.swift */,
-				71985BB626F381C500EE1C66 /* WrappedFeedResponse.swift */,
+				7180111B26F6497900A98DEE /* WrappedResponse.swift */,
 				71985BCC26F3A48200EE1C66 /* FeedResponse.swift */,
 				71985BB826F382B400EE1C66 /* FeedItem.swift */,
 				71985BBC26F3833200EE1C66 /* Profile.swift */,
@@ -359,7 +365,9 @@
 				71BBAEA126F51D9C0052CD04 /* DoubleReduceScaleExtension.swift in Sources */,
 				71BBAE9826F50C3F0052CD04 /* UIConstants.swift in Sources */,
 				71C6F23126F251FD00224D2E /* AppDelegate.swift in Sources */,
+				7180111C26F6497900A98DEE /* WrappedResponse.swift in Sources */,
 				7183328D26F31DAB00F73983 /* NewsFeedViewController.swift in Sources */,
+				7180111826F648A400A98DEE /* ConcreteVideoWrapped.swift in Sources */,
 				7183329226F32CF000F73983 /* APIMethod.swift in Sources */,
 				7183328B26F3145800F73983 /* AuthenticationServiceDelegate.swift in Sources */,
 				71985BC826F388EB00EE1C66 /* Image.swift in Sources */,
@@ -374,13 +382,13 @@
 				71985BBB26F382CF00EE1C66 /* Count.swift in Sources */,
 				71BBCA2226F3AA5E0082FF3B /* NewsFeedHeaderView.swift in Sources */,
 				71C6F24726F259D400224D2E /* ApplicationCoordinator.swift in Sources */,
-				71985BB726F381C500EE1C66 /* WrappedFeedResponse.swift in Sources */,
 				71BBCA2626F3AF640082FF3B /* HeaderRepresentable.swift in Sources */,
 				71985BCD26F3A48200EE1C66 /* FeedResponse.swift in Sources */,
 				7154D0DC26F51F4E00266E37 /* NewsFeedDataLoader.swift in Sources */,
 				71BBCA2826F3B1990082FF3B /* NewsFeedFooterView.swift in Sources */,
 				7183329426F32F4A00F73983 /* NetworkService.swift in Sources */,
 				71BBAE9A26F513420052CD04 /* NewsFeedSizeCalculator.swift in Sources */,
+				7135B9EF26F638FF0091B270 /* ConcreteVideo.swift in Sources */,
 				7183328F26F31FE400F73983 /* NewsFeedView.swift in Sources */,
 				7154D0E026F5217300266E37 /* NewsFeedDataLoaderDelegate.swift in Sources */,
 				7183329726F332FC00F73983 /* SceneDelegateTopMostViewControllerExtension.swift in Sources */,
