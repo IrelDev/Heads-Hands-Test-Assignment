@@ -50,8 +50,10 @@ class NewsFeedTableViewCell: UITableViewCell {
     override func prepareForReuse() {
         super.prepareForReuse()
         
-        headerView.reset()
         attachments = nil
+        
+        headerView.reset()
+        footerView.reset()
     }
 }
 extension NewsFeedTableViewCell {

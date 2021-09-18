@@ -110,7 +110,10 @@ class NewsFeedFooterView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     func reset() {
-        
+        eyeLabel.text = nil
+        loveLabel.text = nil
+        shareLabel.text = nil
+        commentsLabel.text = nil
     }
 }
 extension NewsFeedFooterView {
