@@ -120,6 +120,7 @@ extension NewsFeedTableViewCell: UICollectionViewDelegate, UICollectionViewDataS
         } else if let video = model.video {
             if let url = URL(string: video.imageUrl) {
                 cell.imageView.kf.setImage(with: url)
+                cell.setupAttachmentAsVideo(video: video)
             }
         }
         return cell

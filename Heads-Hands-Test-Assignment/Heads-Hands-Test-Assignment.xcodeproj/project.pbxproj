@@ -190,7 +190,6 @@
 				71BBCA2326F3AA710082FF3B /* NewsFeedTableViewCell.swift */,
 				71BBCA2126F3AA5E0082FF3B /* NewsFeedHeaderView.swift */,
 				71BBCA2726F3B1990082FF3B /* NewsFeedFooterView.swift */,
-				71BBAE9526F4B66D0052CD04 /* NewsFeedCollectionViewCell.swift */,
 			);
 			path = NewsFeedTableViewCell;
 			sourceTree = "<group>";
@@ -216,6 +215,7 @@
 			children = (
 				71BD7A8D26F25DF000DCA7CB /* LoginView.swift */,
 				7183328E26F31FE400F73983 /* NewsFeedView.swift */,
+				71BBAE9526F4B66D0052CD04 /* NewsFeedCollectionViewCell.swift */,
 				71BBCA2926F3B1AC0082FF3B /* NewsFeedTableViewCell */,
 			);
 			path = Views;
