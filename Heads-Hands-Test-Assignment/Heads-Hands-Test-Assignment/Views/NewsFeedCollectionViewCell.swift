@@ -71,6 +71,9 @@ class NewsFeedCollectionViewCell: UICollectionViewCell {
     override func prepareForReuse() {
         super.prepareForReuse()
         
+        imageView.kf.cancelDownloadTask()
+        imageView.image = nil
+        
         video = nil
         videoButton.isHidden = true
         videoDurationLabel.isHidden = true

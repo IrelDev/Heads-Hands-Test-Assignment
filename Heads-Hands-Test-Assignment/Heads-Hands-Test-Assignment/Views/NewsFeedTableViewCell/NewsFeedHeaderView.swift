@@ -82,7 +82,9 @@ class NewsFeedHeaderView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     func reset() {
+        imageView.kf.cancelDownloadTask()
         imageView.image = nil
+        
         dateLabel.text = nil
         titleLabel.text = nil
         contentTextView.text = nil
