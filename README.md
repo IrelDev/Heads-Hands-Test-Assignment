@@ -16,6 +16,10 @@ iOS Test Task from [Heads &amp; Hands](https://handh.ru)
           <td><img src = "Demo/VideoDark.png" /></td>
           <td><img src = "Demo/VideoLight.png"" /></td>
      </tr>
+     <tr>
+          <td><img src = "Demo/PhotoDark.png" /></td>
+          <td><img src = "Demo/PhotoLight.png"" /></td>
+     </tr>
 </table>
 
 <p align="center">  
