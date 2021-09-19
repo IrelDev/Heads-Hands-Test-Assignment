@@ -60,7 +60,7 @@ struct NewsFeedDataProvider {
         
         cell.footerView.loveLabel.text = formatNumber(model.likes?.count ?? 0)
         cell.footerView.commentsLabel.text = formatNumber(model.comments?.count ?? 0)
-        cell.footerView.shareLabel.text = formatNumber(model.shares?.count ?? 0)
+        cell.footerView.shareLabel.text = formatNumber(model.reposts?.count ?? 0)
         
         cell.footerView.eyeLabel.text = formatNumber(model.views?.count ?? 0)
         cell.selectionStyle = .none
